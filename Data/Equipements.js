@@ -1,6 +1,6 @@
 const equipment = [
     // -------------------------------- Platinum
-            {
+ {
   name: "SPARKING!! - Shallot",
   type: "Platinum Equipment",
   conditions: {
@@ -716,53 +716,6 @@ const equipment = [
       ]}
     ]
   },
-
-  {
-    name: "SPARKING!! - Goku (Youth)",
-    type: "Unique Equipment",
-    conditions: { 
-     tags: ["Goku","DBL-EVT-01S"], 
-     match: "all" // варианты: "all" (и), "any" (или)
-    },
-    mainImage: "Image/Equip_img/Unique/EqIco_30010.webp",  // картинка экипировки
-    rarity: "Unique", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
-    slots: [
-      { name: "Slot 1", stats: [   
-        { stat: "Base Health", max: 15, unit: "%" },
-        { stat: "Base Strike Defense", max: 50, unit: "%" },
-        { stat: "Base Blast Defense", max: 50, unit: "%" },
-        { stat: "Base Strike Attack", max: 50, unit: "%" },
-        { stat: "Base Blast Attack", max: 50, unit: "%" }
-  ] },
-      { name: "Slot 2", stats: [
-        {
-          stat: "Strike & Blast Attack",
-          max: 15.00,
-          unit: "%",
-          condition: {
-            type: "allyHasAllTags",
-            tags: ["DB"]
-          }
-        },
-        {
-          stat: "Strike & Blast Defense",
-          max: 15.00,
-          unit: "%",
-          condition: {
-            type: "allyHasAllTags",
-            tags: ["DB"]
-          }
-        }
-      ]},
-      { name: "Slot 3", stats: [   
-        { stat: "Inflicted Damage", max: 70, unit: "%" },
-        { stat: "Sustained Damage CUT", max: 40, unit: "%" }],
-        effects: [
-        "-2 to Arts costs.",
-        "+80% to Ultimate damage for 3 timer counts upon Ultimate Arts activation."
-      ]}
-    ]
-  },
     {
     name: "SPARKING!! - Super Saiyan Goku",
     type: "Unique Equipment",
@@ -1102,7 +1055,44 @@ const equipment = [
 
   // ------------------------------------------------------------------------------------------------ Unique
 {
-    name: "Merciless Pursuit", // особенная эквипка 2 й слот
+    name: "Vegeta Takes Nappa's Hand",
+    type: "Unique Equipment",
+    conditions: { 
+     tags: ["Saiyan Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Unique/EqIco_1888.webp",  // картинка экипировки
+    rarity: "Unique", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Health", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [         
+         { stat: "Base Strike Defense", max: 35, unit: "%" },
+         { stat: "Base Blast Defense", max: 35, unit: "%" }]},
+      { name: "Slot 3", options: [
+        {
+          stat: "Inflicted Damage",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Saiyan Saga (Z)"
+          }
+        },
+         {
+          stat: "Strike & Blast Defense",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Saiyan Saga (Z)"
+          }
+        }]
+
+       }
+    ]
+  },
+{
+    name: "Victorious Fist", // особенная эквипка 2 й слот
     type: "Unique Equipment",
     conditions: { 
      tags: ["Regeneration","BLU"], 
@@ -1507,7 +1497,7 @@ const equipment = [
      tags: ["Future Trunks Saga (S)"], 
      match: "all" // варианты: "all" (и), "any" (или)
     },
-    mainImage: "Image/Equip_img/Unique_up/EqIco_1529.webp",  // картинка экипировки
+    mainImage: "Image/Equip_img/Unique/EqIco_1529.webp",  // картинка экипировки
     rarity: "Unique", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
     slots: [
       { name: "Slot 1", stats: [   
@@ -3155,6 +3145,852 @@ const equipment = [
   },
 // ------------------------------------------------------------------------------------------------ GoldUp
 {
+    name: "Leave the rest to me!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1518.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]},
+      { name: "Slot 2", options: [{ stat: "Base Blast Defense", max: 18, unit: "%" },
+        { stat: "Base Blast Attack", max: 18, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Defense",
+          max: 6,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "GT"
+          }
+        }]}
+    ]
+  },
+{
+    name: "You've earned yourself a little reward!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future","Future Trunks Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1491.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Ki Recovery", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" },
+        { stat: "Base Blast Attack", max: 20, unit: "%" }
+      ]}
+    ]
+  },
+  {
+    name: "Fusion Reborn!",
+    type: "Gold Equipment",
+    conditions: { 
+      tags: ["Fusion Warrior"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1150.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" },
+        {
+          stat: "Blast Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Fusion Warrior"
+          }
+        }] }
+    ]
+  },
+{
+    name: "Goodbye Dad",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1399.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" },
+        { stat: "Base Blast Defense", max: -1, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 30, unit: "%" }]}
+    ]
+ },
+{
+    name: "I'm Counting on You...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Android"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1339.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2",  stats: [
+         { stat: "Base Blast Defense", max: 15, unit: "%" },
+         { stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{stat: "Base Strike Attack", max: 25, unit: "%" }]}
+    ]
+ },
+{
+    name: "Worship me! Give praise unto me!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future","God Ki"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1532.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 28, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" }]},
+      { name: "Slot 3", options: [{ 
+          stat: "Blast Attack", 
+          max: 12, 
+          unit: "%",
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Fusion Warrior", 
+          }
+        },
+         { 
+          stat: "Strike Attack", 
+          max: 12, 
+          unit: "%",
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Fusion Warrior", 
+          }
+        }],
+      options: [
+         { stat: "Base Blast Attack", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }]}
+    ]
+ },
+{
+    name: "Boundary Breaking Vegeta",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Vegeta Clan","Cell Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1252.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" },
+        { stat: "Base Strike Attack", max: 15, unit: "%" }
+      ]},
+      { name: "Slot 2",  stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Attack",
+          max: 6,
+          unit: "%",
+          own: true,  
+          condition: {
+          type: "perTagCount",
+          tag: ["Vegeta Clan","Cell Saga (Z)"]
+          }
+        }]}
+    ]
+ },
+  {
+    name: "You Failure!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies","GRN"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1146.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" },
+        { stat: "Base Blast Attack", max: 18, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [
+                 {
+         stat: "Strike Attack & Defense",
+         max: 20,
+         unit: "%",
+         own: true,
+         condition: {
+           type: "teamTags",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Melee Type", "Defense Type"],  // список тегов
+           match: "any",                // можно "all" или "any"
+         }     
+        }]}
+    ]
+  },
+  {
+    name: "Going Full Out",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Rival Universe","Universe Rep"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1419.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" },{
+          stat: "Strike Attack",
+          max: 5,
+          unit: "%",
+          own: true,
+          condition: {
+          type: "perTagCount",
+          tag: "Universe Rep"
+          }
+        }]}
+    ]
+  },
+  {
+    name: "Okay, the Warmup Is Over!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["DB"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_11156.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 33, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 33, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 12, unit: "%" }]}
+    ]
+  },
+  {
+    name: "This scythe will carve a reminder into your mortal flesh!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Goku Black"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1610.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 22, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" },
+        { stat: "Health Restoration", max: 10, unit: "%" }
+      ]}
+    ]
+  },
+  {
+    name: "This is goodbye...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Rival Universe","Melee Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1614.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 13, unit: "%" },
+        { stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Critical", max: 18, unit: "%" },
+        { stat: "Base Blast Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Critical", max: 30, unit: "%" }]}
+    ]
+  },
+{
+    name: "Hahahahaha!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1623.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",   stats: [
+         { stat: "Base Blast Defense", max: 13, unit: "%" },
+         { stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 18, unit: "%" },
+         { stat: "Base Strike Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [ { stat: "Base Blast Defense", max: 14, unit: "%" },
+         { stat: "Base Strike Defense", max: 14, unit: "%" }]}
+    ]
+ },
+{
+    name: "You can't even keep up with me, can you?!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki","Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1527.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Ki Recovery", max: 20, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 30, unit: "%" },
+         { stat: "Base Strike Defense", max: 30, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Special Move Damage", max: 10, unit: "%" }
+      ]}
+    ]
+ },
+{
+    name: "Hmph, dirty fireworks.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Frieza Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1636.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Ki Recovery", max: 12, unit: "%" },
+        { stat: "Special Move Damage", max: 12, unit: "%" }
+      ]},
+      { name: "Slot 2",  stats: [{
+          stat: "Strike & Blast Attack",
+          max: 10.00,
+          unit: "%",
+          own: true,
+          condition: {
+            type: "allyHasAllTags",
+            tags: ["Frieza Saga (Z)"]
+          }
+        }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 30, unit: "%" },
+         { stat: "Base Strike Attack", max: 30, unit: "%" }]}
+    ]
+ },
+{
+    name: "Wooaaaagh!!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Super Saiyan","Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1641.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Critical", max: 12, unit: "%" },
+        { stat: "Base Strike Attack", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Critical", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" },
+        { stat: "Base Strike Defense", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Critical", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" },
+      {
+          stat: "Strike Attack",
+          max: 10.00,
+          unit: "%",
+          own: true,
+          condition: {
+            type: "allyHasAllTags",
+            tags: ["Sagas From the Movies"]
+          }
+        }]}
+    ]
+ },
+{
+    name: "It hurts my pride...!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1660.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 25, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Special Move Damage", max: 12, unit: "%" },
+        { stat: "Health Restoration", max: 12, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        {
+          stat: "Strike & Blast Defense",
+          max: 10.00,
+          unit: "%",
+          condition: {
+            type: "allyHasAllTags",
+            tags: ["Saiyan Saga (Z)"]
+          }
+        }
+      ]}
+    ]
+ },
+{
+    name: "Vegeta's Anger",
+    type: "Gold Equipment",
+    conditions: { 
+     or: [
+    { type: "selfTags", tags: ["Vegeta", "Melee Type"], match: "all" },
+    { type: "selfTags", tags: ["Vegeta", "Ranged Type"], match: "all" }
+  ]
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1434.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Attack", max: 10, unit: "%" },
+        { stat: "Special Move Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 28, unit: "%" }]}
+    ]
+ },
+{
+    name: "Let's bring him down, Kale!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Rival Universe","Ranged Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1644.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 17, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 15, unit: "%" },
+         { stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" },
+        { stat: "Base Blast Attack", max: 20, unit: "%" }
+      ]}
+    ]
+ },
+  {
+    name: "Nnggh...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1559.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Critical", max: 22, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Attack", max: 25, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" },
+        { stat: "Health Restoration", max: 12, unit: "%" },
+      { stat: "Special Move Damage", max: 12, unit: "%" }]}
+    ]
+ },
+  {
+    name: "A Battle of the Gods",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1664.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Ki Recovery", max: 15, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Ki Recovery", max: 15, unit: "%" },
+        { stat: "Base Strike Attack", max: 15, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 12.5, unit: "%" },
+        { stat: "Base Ki Recovery", max: 12.5, unit: "%" }
+      ]}
+    ]
+ },
+  {
+    name: "Bardock... That's my name.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Team Bardock","EXTREME"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1674.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" },
+        { stat: "Base Blast Defense", max: 15, unit: "%" }
+      ]},
+      { name: "Slot 3",options: [
+         {
+          stat: "Strike & Blast Attack",
+          max: 6,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Team Bardock"
+          }
+        }]}
+    ]
+ },
+  {
+    name: "HRAAAAAGH!!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Broly","Super Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1607.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" },
+        { stat: "Base Strike Attack", max: 15, unit: "%" }
+      ]},
+      { name: "Slot 3",stats: [{ stat: "Base Blast Attack", max: 18, unit: "%" },
+        { stat: "Base Strike Attack", max: 18, unit: "%" }
+      ]}
+    ]
+ },
+  {
+    name: "You must be Frieza...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","Frieza Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1681.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 10, unit: "%" },
+        { stat: "Special Move Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" },
+        { stat: "Base Strike Defense", max: 15, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" },
+        { stat: "Base Blast Attack", max: 10, unit: "%" }
+      ]}
+    ]
+ },
+  {
+    name: "Show us what you can do.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Universe Rep"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1685.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" },
+        { stat: "Base Strike Defense", max: 20, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },        
+        {
+          stat: "Strike Attack ", 
+          max: 10, 
+          unit: "%",
+          own: true, 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Universe Rep", 
+          }
+        }
+      ]}
+    ]
+ },
+  {
+    name: "If that's your special move, then I want it done right.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Universe Rep"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1582.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" },
+        { stat: "Base Ki Recovery", max: 15, unit: "%" }
+      ]},
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Base Blast Attack", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Base Blast Attack", max: 10, unit: "%" }
+      ]}
+    ]
+ },
+  {
+    name: "Confident Goku!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Cell Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1297.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" },
+        { stat: "Base Strike Attack", max: 12, unit: "%" }
+      ]},
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 13, unit: "%" },
+         { stat: "Base Strike Attack", max: 13, unit: "%" }],
+        options: [
+          {
+         stat: "Blast Attack",
+         max: 10,
+         unit: "%",
+         own: true,
+         condition: {
+           type: "teamTags",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Saiyan", "Cell Saga (Z)"],  // список тегов
+           match: "all",                // можно "all" или "any"
+         }     
+        },
+          {
+         stat: "Strike Attack",
+         max: 10,
+         unit: "%",
+         own: true,
+         condition: {
+           type: "teamTags",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Saiyan", "Cell Saga (Z)"],  // список тегов
+           match: "all",                // можно "all" или "any"
+         }     
+        }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 12, unit: "%" }]}
+    ]
+ },
+  {
+    name: "HAAAAA...!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","Universe Survival Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1695.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", options: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+         { stat: "Base Ki Recovery", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Ki Recovery", max: 25, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 30, unit: "%" },
+         { stat: "Base Strike Attack", max: 30, unit: "%" }]}
+    ]
+ },
+  {
+    name: "The Revived Hero",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies","RED"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1714.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" },
+        { stat: "Health Restoration", max: 12, unit: "%" }
+      ]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Special Move Damage", max: 10, unit: "%" }
+      ]}
+    ]
+ },
+  {
+    name: "You're not getting away from me that easily.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT","Son Family"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1765.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [
+         { stat: "Base Blast Attack", max: 15, unit: "%" },
+         { stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [
+         { stat: "Base Blast Attack", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "12.00% damage to Powerful Opponent for 90 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "I've Eliminated Those Cursed Saiyans!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT","Powerful Opponent"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1503.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 30, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Saiyan",
+        "10.00% damage to Hybrid Saiyan"
+      ]}
+    ]
+ }, 
+  {
+    name: "I'll give you a handicap",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1541.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Health", max: 12, unit: "%" }] },
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Defense", max: 33, unit: "%" },
+         { stat: "Base Strike Defense", max: 33, unit: "%" }],
+        options: [
+         { stat: "Base Blast Attack", max: 5, unit: "%" },
+         { stat: "Base Strike Attack", max: 5, unit: "%" }]},
+      { name: "Slot 3",  options: [
+         { stat: "Base Blast Defense", max: 5, unit: "%" },
+         { stat: "Base Strike Defense", max: 5, unit: "%" }],
+        options: [
+         { stat: "Base Blast Attack", max: 33, unit: "%" },
+         { stat: "Base Strike Attack", max: 33, unit: "%" }]}
+    ]
+ }, 
+  {
+    name: "Bestowed Hope",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future","Weapon Wielder"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1779.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 10, unit: "%" },
+        { stat: "Special Move Damage", max: 10, unit: "%" }
+      ] },
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 32, unit: "%" },
+         { stat: "Base Strike Attack", max: 32, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 12, unit: "%" }] }
+    ]
+ }, 
+  {
+    name: "I call it Super Saiyan 3.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","Hybrid Saiyan"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1678.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" },
+        { stat: "Base Blast Defense", max: 15, unit: "%" }
+      ] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" },
+        { stat: "Base Blast Attack", max: 15, unit: "%" }
+      ] },
+      { name: "Slot 3", stats: [
+        { 
+          stat: "Blast Defense", 
+          max: 6, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan", 
+          }
+        },
+                { 
+          stat: "Strike Defense", 
+          max: 6, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan 2",
+          }
+        },
+                { 
+          stat: "Strike & Blast", 
+          max: 6, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan 3",
+          }
+        },
+      ] }
+    ]
+ }, 
+{
+    name: "Hah! Take that!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Frieza Force","Ranged Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1655.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 16, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" },
+                {
+          stat: "Blast Attack",
+          max: 10.00,
+          unit: "%",
+          own: true,  
+          condition: {
+            type: "allyHasAllTags",
+            tags: ["Frieza Force"]
+          }
+        }
+      ] },
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 12, unit: "%" },
+        { stat: "Special Move Damage", max: 12, unit: "%" }
+      ] }
+    ]
+ }, 
+{
+    name: "Unexpected Assault",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Regeneration","Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1853.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Health Restoration", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [ { stat: "Base Strike Attack", max: 38, unit: "%" }] }
+    ]
+ },
+  {
+    name: "Haah!",
+    type: "Gold Equipment",
+    conditions: { tags: ["Sagas From the Movies"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1267.webp",  // картинка экипировки
+    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" }] }
+    ]
+  },
+{
     name: "Consider This an Honor!", 
     type: "Gold Equipment",
     conditions: { 
@@ -3673,20 +4509,2866 @@ const equipment = [
     ]
   },
 
-  // ------------------------------------------------------------------------------------------------ Gold  
-
+  // ------------------------------------------------------------------------------------------------ Gold
+{
+    name: "20... Please, Allow Me",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Android"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1056.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 17.5, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 12.5, unit: "%" }]}
+    ]
+  },
+{
+    name: "Don't Interfere!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Piccolo"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1060.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "25.00% damage to Android for 20 timer counts"]}
+    ]
+  },
+{
+    name: "You've Made a Critical Mistake",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Regeneration"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1046.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 20, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Ki Recovery", max: 15, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% defense against Android"]}
+    ]
+  },
+{
+    name: "Of Course!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["BLU"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1176.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "50.00% Strike damage CUT against GRN when health is below 50%"]}
+    ]
+  },
+{
+    name: "You Making Fun of Me?!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1131.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]}
+    ]
+  },
+{
+    name: "W-Wait a sec!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["BLU"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1090.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 20, unit: "%" }]},
+      { name: "Slot 2", options: [
+         { stat: "Base Strike Attack", max: 15, unit: "%" },
+         { stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "20.00% defense against Hybrid Saiyan when health is below 50%"
+        ]}
+    ]
+  },
+{
+    name: "Gwaaaaagh!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["EXTREME","Frieza Force"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1093.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" }]},
+      { name: "Slot 2", stats: [{
+          stat: "Strike Damage inflicted",
+          max: 7,
+          unit: "%",
+          own: true,
+          condition: {
+          type: "perTagCount",
+          tag: "Frieza Force"
+          }
+        }]},
+      { name: "Slot 3", stats: [{
+          stat: "Blast Damage inflicted",
+          max: 7,
+          unit: "%",
+          own: true,
+          condition: {
+          type: "perTagCount",
+          tag: "Frieza Force"
+          }
+        }]}
+    ]
+  },
+{
+    name: "It's okay now!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Girls"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1207.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Critical", max: 12.5, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }]}
+    ]
+  },
+{
+    name: "Munch! Munch! Hell",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["RED"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1127.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12.5, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]}
+    ]
+  },
+{
+    name: "Wait, Gohan!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Defense Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1235.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 13, unit: "%" }]}
+    ]
+  },
+{
+    name: "Androids",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Android"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1118.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 12.5, unit: "%" }]},
+      { name: "Slot 2", stats: [{
+          stat: "Strike Defense",
+          max: 6,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Android"
+          }
+        }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 15, unit: "%" },
+         { stat: "Base Strike Attack", max: 15, unit: "%" }]}
+    ]
+  },
+{
+    name: "Alright!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Fusion Warrior"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1438.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Fusion Warrior"
+          }
+        }]}
+    ]
+  },
+{
+    name: "A proud warrior!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1495.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 12.5, unit: "%" }]},
+      { name: "Slot 2", options: [{ stat: "Base Blast Defense", max: 13, unit: "%" },
+        { stat: "Base Strike Attack", max: 13, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Defense",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "God Ki"
+          }
+        }]}
+    ]
+  },
+{
+    name: "Goodbye, Everyone",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1353.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 12.5, unit: "%" }]},
+      { name: "Slot 2", options: [{ stat: "Base Strike Defense", max: 18, unit: "%" },
+        { stat: "Base Strike Attack", max: 18, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]}
+    ]
+  },
+{
+    name: "I won't be as gentle as I was before...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Transforming Warrior"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1180.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 12.5, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+          stat: "Blast Defense",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Transforming Warrior"
+          }
+        }]}
+    ]
+  },
+{
+    name: "Leave the rest to me!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1518.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Defense",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "GT"
+          }
+        }]}
+    ]
+  },
+{
+    name: "You've earned yourself a little reward!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future","Ranged Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1491.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Ki Recovery", max: 12.5, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" }]}
+    ]
+  },
+{
+    name: "Blast It!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","YEL"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1153.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 12.5, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", options: [
+        { stat: "Base Strike Defense", max: 20, unit: "%" },
+        { stat: "Base Strike Attack", max: 20, unit: "%" }]}
+    ]
+  },
+  {
+    name: "Fusion Reborn!",
+    type: "Gold Equipment",
+    conditions: { 
+      tags: ["Fusion Warrior","GRN"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1150.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [        {
+          stat: "Blast Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Fusion Warrior"
+          }
+        }] }
+    ]
+  },
+{
+    name: "This Will Be A MASSACRE!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Shallot"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1039.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [
+        { stat: "Base Strike Defense", max: 15, unit: "%" },
+        { stat: "Base Blast Defense", max: 15, unit: "%" }
+      ] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Ki Recovery", max: 10, unit: "%" }]}
+    ]
+  },
+{
+    name: "Eh?",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1289.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }] },,
+      { name: "Slot 2", stats: [{ stat: "Base Critical", max: 10, unit: "%" }]},
+      { name: "Slot 3",
+        options: [
+         { stat: "Base Blast Attack", max: 16.50, unit: "%" },
+         { stat: "Base Strike Attack", max: 16.50, unit: "%" }]}
+    ]
+  },
   {
     name: "Haah!",
     type: "Gold Equipment",
-    conditions: { tags: ["Sagas From the Movies"], 
-     match: "any" // варианты: "all" (и), "any" (или)
+    conditions: { 
+      tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
      },
     mainImage: "Image/Equip_img/Gold/EqIco_1267.webp",  // картинка экипировки
-    rarity: "GoldUp", // Gold, Unique, Silver, Bronze
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 12.5, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }] }
+    ]
+  },
+{
+    name: "Just hang in a little longer Piccolo!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Goku"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1121.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Strike Defense", max: 12.5, unit: "%" },
+         { stat: "Base Strike Attack", max: 12.5, unit: "%" } ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]}
+    ]
+ },
+{
+    name: "Battle of Saiyans",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1413.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         "10.00% to Blast Defense for 20 timer counts when faced with Saiyan.",
+         "10.00% to Strike Defense for 20 timer counts when faced with Saiyan." ]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+{
+    name: "The fun starts now!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Fusion Warrior","Ranged Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1441.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Defense", max: 15, unit: "%" },
+         { stat: "Base Strike Defense", max: 15, unit: "%" }]}
+    ]
+ },
+{
+    name: "Goodbye Dad",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1399.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 18, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" },
+        { stat: "Base Blast Defense", max: -1, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]}
+    ]
+ },
+{
+    name: "You've really outdone yourselves, haven't you?",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Lineage of Evil"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1402.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Critical", max: 12.5, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Defense",
+          max: 5,
+          unit: "%",
+          own: true,
+          condition: {
+          type: "perTagCount",
+          tag: "Lineage of Evil"
+          }
+        }]}
+    ]
+ },
+{
+    name: "I'm Counting on You...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Android"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1339.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 15, unit: "%" },
+         { stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{stat: "Base Strike Attack", max: 20, unit: "%" }]}
+    ]
+ },
+{
+    name: "I can't sense Gohan!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Ranged Type","BLU"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1213.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Defense", max: 12.5, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+         stat: "Blast Attack",
+         max: 10,
+         unit: "%",
+         own: true,
+         condition: {
+           type: "teamTags",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["YEL", "PUR"],  // список тегов
+           match: "any",                // можно "all" или "any"
+         }     
+        }]}
+    ]
+ },
+{
+    name: "Worship me! Give praise unto me!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1532.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", options: [{ 
+          stat: "Blast Attack", 
+          max: 10, 
+          unit: "%",
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Fusion Warrior", 
+          }
+        },
+         { 
+          stat: "Strike Attack", 
+          max: 10, 
+          unit: "%",
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Fusion Warrior", 
+          }
+        }]}
+    ]
+ },
+{
+    name: "Saiyans don't do limits!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1541.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Defense", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Critical", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{
+          stat: "Blast Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Future "
+          }
+        }]}
+    ]
+ },
+{
+    name: "Saiyans don't do limits!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1541.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Defense", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Critical", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{
+          stat: "Blast Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Future "
+          }
+        }]}
+    ]
+ },
+{
+    name: "I didn't know it was going to be that kind of fight",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Son Family","GRN"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1543.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Defense", max: 12.5, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+          stat: "Blast Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Son Family"
+          }
+        }]}
+    ]
+ },
+{
+    name: "Crush Them!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["PUR"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1163.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+         stat: "Strike Defense",
+         max: 10,
+         unit: "%",
+         condition: {
+           type: "teamTags",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["RED", "BLU"],  // список тегов
+           match: "any",                // можно "all" или "any"
+         }     
+        }]}
+    ]
+ },
+{
+    name: "I'm Young Again!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Regeneration","BLU"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1167.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+         stat: "Strike Defense",
+         max: 10,
+         unit: "%",
+         condition: {
+           type: "teamTags",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Regeneration", "PUR"],  // список тегов
+           match: "any",                // можно "all" или "any"
+         }     
+        }]}
+    ]
+ },
+{
+    name: "Boundary Breaking Vegeta",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Vegeta Clan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1252.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Vegeta Clan"
+          }
+        }]}
+    ]
+ },
+  {
+    name: "Universe 6 & Universe 7",
+    type: "Gold Equipment",
+    conditions: {
+  or: [
+    { type: "selfTags", tags: ["Future", "GRN"], match: "all"  },
+    { type: "selfTags", tags: ["Future", "PUR"], match: "all" }
+     ]
+   },
+    mainImage: "Image/Equip_img/Gold/EqIco_1536.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ 
+          stat: "Blast Defense", 
+          max: 10, 
+          unit: "%",
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Powerful Opponent", 
+          }
+        }]}
+    ]
+  },
+  {
+    name: "Universe 6 & Universe 7",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Rival Universe"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1411.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+  },
+  {
+    name: "You Failure!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1146.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", options: [
+                 { 
+          stat: "Strike Defense", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Defense Type", 
+          }
+        },
+                 { 
+          stat: "Strike Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Melee Type", 
+          }
+        }]}
+    ]
+  },
+  {
+    name: "Going Full Out",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Rival Universe"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1419.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{
+          stat: "Strike Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Rival Universe"
+          }
+        }]}
+    ]
+  },
+  {
+    name: "I'll just smash it to pieces!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1470.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 22, unit: "%" }]}
+    ]
+  },
+  {
+    name: "I'll just smash it to pieces!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1470.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 22, unit: "%" }]}
+    ]
+  },
+  {
+    name: "Okay, the Warmup Is Over!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Dragon Ball Saga"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1212.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+  },
+  {
+    name: "Ugh!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Hybrid Saiyan","Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1212.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]}
+    ]
+  },
+  {
+    name: "Hurry up and die!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Ranged Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1381.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Ki Recovery", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 12, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" }]}
+    ]
+  },
+  {
+    name: "Pathetic!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies","YEL"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1596.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+  },
+  {
+    name: "Ahahahahahaha!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Regeneration"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1596.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Vegeta Clan",
+        "10.00% damage to Son Family"
+      ]}
+    ]
+  },
+  {
+    name: "This scythe will carve a reminder into your mortal flesh!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future","Powerful Opponent"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1610.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]}
+    ]
+  },
+  {
+    name: "This is goodbye...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Rival Universe","Melee Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold/EqIco_1614.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Critical", max: 22, unit: "%" }]}
+    ]
+  },
+   {
+    name: "These times were dark enough without you",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Super Saiyan 4"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+    },
+    mainImage: "Image/Equip_img/Gold_up/EqIco_1548.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Ultimate Damage", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+  },
+{
+    name: "Dimension Guard",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Defense Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1139.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 18, unit: "%" },
+         { stat: "Base Strike Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [ { stat: "Base Health", max: 8, unit: "%" }]}
+    ]
+ },
+{
+    name: "Hahahahaha!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1623.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",   options: [
+         { stat: "Base Blast Defense", max: 13, unit: "%" },
+         { stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 15, unit: "%" },
+         { stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [ { stat: "Base Blast Defense", max: 12, unit: "%" },
+         { stat: "Base Strike Defense", max: 12, unit: "%" }]}
+    ]
+ },
+{
+    name: "You can't even keep up with me, can you?!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1527.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Ki Recovery", max: 10, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 15, unit: "%" },
+         { stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+{
+    name: "Hmph, dirty fireworks.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Frieza Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1636.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Ki Recovery", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 23, unit: "%" },
+         { stat: "Base Strike Attack", max: 23, unit: "%" }]}
+    ]
+ },
+{
+    name: "Medical Machine",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Frieza Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1026.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  options: [
+         { stat: "Base Blast Defense", max: 12, unit: "%" },
+         { stat: "Base Strike Defense", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Health", max: 8, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 15, unit: "%" },
+         { stat: "Base Strike Attack", max: 15, unit: "%" }]}
+    ]
+ },
+{
+    name: "Okay, here I go!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Fusion Warrior"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1627.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+{
+    name: "Wooaaaagh!!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Super Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1641.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Critical", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Critical", max: 10, unit: "%" },
+        { stat: "Base Strike Defense", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Critical", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" }]}
+    ]
+ },
+{
+    name: "It hurts my pride...!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1660.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Special Move Damage", max: 12, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+{
+    name: "Vegeta's Anger",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Vegeta"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1434.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 23, unit: "%" }]}
+    ]
+ },
+{
+    name: "Let's bring him down, Kale!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Rival Universe"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1644.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Attack", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 18, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Gehehehe!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Minion"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1663.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", options: [
+         {
+          stat: "Blast Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Minion"
+          }
+        },
+         {
+          stat: "Strike Attack",
+          max: 5,
+          unit: "%",
+          own: true,
+          condition: {
+          type: "perTagCount",
+          tag: "Minion"
+          }
+        }]}
+    ]
+ },
+  {
+    name: "Well this is a pleasant surprise.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Regeneration","Powerful Opponent"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1369.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Blast Defense", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Critical", max: 10, unit: "%" },
+        { stat: "Base Blast Defense", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 18, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Nnggh...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies","Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1559.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Critical", max: 12, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" },
+        { stat: "Health Restoration", max: 12, unit: "%" }]}
+    ]
+ },
+  {
+    name: "A Battle of the Gods",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1664.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Ki Recovery", max: 13, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Ki Recovery", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 12, unit: "%" }]}
+    ]
+ },
+  {
+    name: "The Rescued Saiyans",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies","Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1664.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2",  options: [
+         { stat: "Base Blast Defense", max: 18, unit: "%" },
+         { stat: "Base Strike Defense", max: 18, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Defense", max: 20, unit: "%" },
+         { stat: "Base Strike Defense", max: 20, unit: "%" }]}
+    ]
+ },
+  {
+    name: "I can feel it. Share your power with me!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Vegeta Clan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1670.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1",  stats: [{ stat: "Base Strike Attack", max: 10, unit: "%" }]},
+      { name: "Slot 2",  stats: [{ stat: "Base Strike Attack", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Critical", max: 15, unit: "%" },
+        { stat: "Base Strike Attack", max: 15, unit: "%" }
+      ]}
+    ]
+ },
+  {
+    name: "Righteous Saiyans",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1460.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", options: [
+         { stat: "Base Blast Defense", max: 13, unit: "%" },
+         { stat: "Base Strike Attack", max: 13, unit: "%" }]},
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Defense", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 3",options: [
+         { stat: "Health Restoration", max: 12, unit: "%" },
+         { stat: "Special Move Damage", max: 12, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Bardock... That's my name.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Team Bardock"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1674.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3",options: [
+         {
+          stat: "Blast Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Team Bardock"
+          }
+        },
+         {
+          stat: "Strike Attack",
+          max: 5,
+          unit: "%",
+          condition: {
+          type: "perTagCount",
+          tag: "Team Bardock"
+          }
+        }]}
+    ]
+ },
+  {
+    name: "HRAAAAAGH!!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies","Super Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1607.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3",options: [
+         { stat: "Base Blast Attack", max: 18, unit: "%" },
+         { stat: "Base Strike Attack", max: 18, unit: "%" }]}
+    ]
+ },
+  {
+    name: "You must be Frieza...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Frieza Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1681.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Show us what you can do.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Universe Survival Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1685.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Friezaaaaaa!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1699.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 12, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 13, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "12.00% damage to Powerful Opponent after 30 timer counts"
+      ]}
+    ]
+ },
+  {
+    name: "If that's your special move, then I want it done right.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Universe Survival Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1582.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Ki Recovery", max: 15, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Just my way to build team solidarity.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1692.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Ki Recovery", max: 20, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Critical", max: 20, unit: "%" }]}
+    ]
+ },
+  {
+    name: "We hate humans!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Android"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1206.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Sorry to keep you waiting this long, Caulifla!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Girls"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1648.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 16, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Confident Goku!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1297.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", options: [
+         { stat: "Base Blast Attack", max: 12, unit: "%" },
+         { stat: "Base Strike Attack", max: 12, unit: "%" }]},
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 13, unit: "%" },
+         { stat: "Base Strike Attack", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "HAAAAA...!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","Universe Survival Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1695.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Ki Recovery", max: 20, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }]}
+    ]
+ },
+  {
+    name: "The Revived Hero",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1714.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Garr!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Majin Buu Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1618.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 12, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "What are you? Immortal?",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Vegeta Clan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1717.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", options: [
+         { stat: "Base Ki Recovery", max: 10, unit: "%" },
+         { stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 18, unit: "%" },
+         { stat: "Base Strike Attack", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "This is the last Senzu Bean...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1193.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }]}
+    ]
+ },
+  {
+    name: "Oh, I'm terrified... Aren't you?",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Lineage of Evil"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1727.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" }]},
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 15, unit: "%" },
+         { stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Super Saiyan for 60 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "What a laugh!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Powerful Opponent"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1737.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 25, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Saiyan for 60 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "You're not getting away from me that easily.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1765.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", options: [
+         { stat: "Base Blast Attack", max: 15, unit: "%" },
+         { stat: "Base Strike Attack", max: 15, unit: "%" }]},
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Powerful Opponent for 60 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "Actually, there is one word that comes to mind!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies","Hybrid Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1631.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 30, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Powerful Opponent for 60 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "Uwroooooh!!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Regeneration"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1767.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 23, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Sagas From the Movies for 60 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "I've Eliminated Those Cursed Saiyans!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1503.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 13, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Saiyan for 60 timer counts",
+        "10.00% damage to Hybrid Saiyan for 60 timer counts"
+      ]}
+    ]
+ }, 
+{
+    name: "I'm not done yet!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future Trunks Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1753.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 12, unit: "%" }]}
+    ]
+ }, 
+{
+    name: "I'm not done yet!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future Trunks Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1753.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 12, unit: "%" }]}
+    ]
+ }, 
+{
+    name: "Enough! I've had all I can take of you!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1751.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }] },
+      { name: "Slot 2",stats: [{ stat: "Base Critical", max: 20, unit: "%" }]},
+      { name: "Slot 3",  stats: [{ stat: "Base Critical", max: 20, unit: "%" }]}
+    ]
+ }, 
+  {
+    name: "I'll give you a handicap",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1541.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Health", max: 10, unit: "%" }] },
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Defense", max: 30, unit: "%" },
+         { stat: "Base Strike Defense", max: 30, unit: "%" }],
+        options: [
+         { stat: "Base Blast Attack", max: 10, unit: "%" },
+         { stat: "Base Strike Attack", max: 10, unit: "%" }]},
+      { name: "Slot 3",  options: [
+         { stat: "Base Blast Defense", max: 10, unit: "%" },
+         { stat: "Base Strike Defense", max: 10, unit: "%" }],
+        options: [
+         { stat: "Base Blast Attack", max: 30, unit: "%" },
+         { stat: "Base Strike Attack", max: 30, unit: "%" }]}
+    ]
+ }, 
+  {
+    name: "End this futility.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Universe Survival Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1583.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Saiyan for 60 timer counts",
+        "10.00% damage to God Ki for 60 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "It doesn't matter.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Android"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1091.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", options: [
+         { stat: "Ultimate Damage", max: 10, unit: "%" },
+         { stat: "Special Move Damage", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" }]}
+    ]
+ }, 
+  {
+    name: "Say your prayers!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Universe Rep","Girls"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1775.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", options: [
+         { stat: "Base Blast Attack", max: 12, unit: "%" },
+         { stat: "Base Strike Attack", max: 12, unit: "%" }] },
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 18, unit: "%" },
+         { stat: "Base Strike Attack", max: 18, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Android for 60 timer counts",
+        "10.00% damage to Girls for 60 timer counts"
+      ]}
+    ]
+ }, 
+    {
+    name: "What a bland attack.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Universe Rep"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1773.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Ki Recovery", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Base Critical", max: 12, unit: "%" }
+      ]},
+      { name: "Slot 3",stats: [{ stat: "Base Blast Attack", max: 30, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" }
+      ]}
+    ]
+ }, 
+    {
+    name: "Showdown on a Universal Stage",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1769.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 13, unit: "%" }]},
+      { name: "Slot 3", effects: [
+        "10.00% damage to Universe Rep for 60 timer counts",
+        "10.00% damage to Rival Universe for 60 timer counts"
+      ]}
+    ]
+ }, 
+  {
+    name: "Bestowed Hope",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1779.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }] }
+    ]
+ }, 
+  {
+    name: "I call it Super Saiyan 3.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","Hybrid Saiyan"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1678.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 10, unit: "%" },
+        { stat: "Base Blast Defense", max: 10, unit: "%" }
+      ] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 10, unit: "%" },
+        { stat: "Base Blast Attack", max: 10, unit: "%" }
+      ] },
+      { name: "Slot 3", stats: [
+        { 
+          stat: "Blast Defense", 
+          max: 5, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan", 
+          }
+        },
+                { 
+          stat: "Strike Defense", 
+          max: 5, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan 2",
+          }
+        },
+                { 
+          stat: "Strike Attack", 
+          max: 5, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan 3",
+          }
+        },
+                { 
+          stat: "Blast Attack", 
+          max: 5, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "God Ki", 
+          }
+        }
+      ] }
+    ]
+ }, 
+  {
+    name: "Fighting Alongside Former Foes",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","Lineage of Evil"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1787.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Health", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [
+                { 
+          stat: "Blast Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Son Family", 
+          }
+        }
+      ] },
+      { name: "Slot 3", stats: [
+                { 
+          stat: "Strike Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Frieza Force", 
+          }
+        }
+      ] }
+    ]
+ }, 
+  {
+    name: "Lightning-Fast Preemptive Strike",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Son Family"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1772.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", options: [
+         { stat: "Base Blast Attack", max: 15, unit: "%" },
+         { stat: "Base Strike Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 12, unit: "%" },
+        { stat: "Base Strike Attack", max: 12, unit: "%" }] },
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" },
+         { stat: "Base Strike Defense", max: 13, unit: "%" }
+      ] }
+    ]
+ }, 
+{
+    name: "It's over.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1810.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 20, unit: "%" }] },
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Base Strike Attack", max: 10, unit: "%" }
+      ] }
+    ]
+ }, 
+{
+    name: "It's okay, guys... I'll be right there.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Frieza Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1834.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 30, unit: "%" }] },
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }] }
+    ]
+ }, 
+{
+    name: "Hah! Take that!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Frieza Force"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1655.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 18, unit: "%" }] },
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }] }
+    ]
+ }, 
+{
+    name: "You Thought That Would Scare Me?!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Cell Saga (Z)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1314.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Ki Recovery", max: 20, unit: "%" }] },
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 25, unit: "%" },
+         { stat: "Base Strike Attack", max: 25, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Special Move Damage", max: 12, unit: "%" },
+        { stat: "Health Restoration", max: 12, unit: "%" }
+      ] }
+    ]
+ }, 
+{
+    name: "The only monster here is you!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["DB"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1846.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }] },
+      { name: "Slot 2", options: [
+         { stat: "Base Blast Attack", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 10, unit: "%" }] }
+    ]
+ }, 
+{
+    name: "Now I'll send you back to your ghost land!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1821.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }]},
+      { name: "Slot 3", options: [
+         { stat: "Base Blast Attack", max: 20, unit: "%" },
+         { stat: "Base Strike Attack", max: 20, unit: "%" }] }
+    ]
+ }, 
+{
+    name: "Unexpected Assault",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Regeneration","Powerful Opponent"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1853.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 16, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]},
+      { name: "Slot 3", stats: [ { stat: "Base Strike Attack", max: 20, unit: "%" }] }
+    ]
+ }, 
+{
+    name: "The outcome will be different this time, Goku!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Otherworld Warrior"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1848.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 10, unit: "%" },
+        { stat: "Base Blast Defense", max: 10, unit: "%" }
+      ] },
+      { name: "Slot 2", options: [
+         { 
+          stat: "Blast Defense", 
+          max: 13, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Sagas From the Movies", 
+          }
+        },
+        { 
+          stat: "Strike Defense", 
+          max: 13, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Sagas From the Movies", 
+          }
+        }]},
+      { name: "Slot 3", stats: [ { stat: "Base Health", max: 10, unit: "%" }] }
+    ]
+ }, 
+{
+    name: "Face of Fury",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Son Family","Hybrid Saiyan"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1798.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Health", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [
+        { 
+          stat: "Strike Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "teamTags",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Son Family", 
+          }
+        }
+      ]},
+      { name: "Slot 3", stats: [        
+        {
+         stat: "Blast Attack",
+         max: 10,
+         unit: "%",
+         condition: {
+           type: "teamTags",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Vegeta Clan", "Sagas From the Movies"],  // список тегов
+           match: "any",                // можно "all" или "any"
+         }     
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Heh-heh-heh...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1870.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 18, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" },
+        { 
+          stat: "Strike Attack", 
+          max: 15, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Team Bardock", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "I see you decided to show yourself, monster.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Cell Saga (Z)"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1216.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 25, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Health Restoration", max: 10, unit: "%" },
+        {
+         stat: "Strike & Blast Defense",
+         max: 10,
+         unit: "%",
+         own: true,
+         condition: {
+           type: "selfTag",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Android", "Regeneration"],  // список тегов
+           match: "all",                // можно "all" или "any"
+         }     
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Cell, huh?",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Cell Saga (Z)"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1250.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" },
+        { 
+          stat: "Strike Defense", 
+          max: 15, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Cell Games Announcement",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Powerful Opponent"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1295.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 12, unit: "%" },
+        { stat: "Base Blast Defense", max: 12, unit: "%" }
+      ] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Critical", max: 15, unit: "%" },
+        { 
+          stat: "Blast Attack", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Regeneration", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "A Menacing Transformation",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Powerful Opponent"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1816.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" },
+        {
+         stat: "Strike Attack",
+         max: 12,
+         unit: "%",
+         own: true,
+         condition: {
+           type: "selfTag",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Lineage of Evil", "Sagas From the Movies"],  // список тегов
+           match: "all",                // можно "all" или "any"
+         }     
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Goku Enraged",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan","Super Warrior","Regeneration"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1887.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Critical", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" },
+        { 
+          stat: "Strike & Blast Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Saiyan Saga (Z)", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "I'm glad I wasn't too late...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Majin Buu Saga (Z)"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1904.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" },
+        { 
+          stat: "Blast Attack", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Hybrid Saiyan", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "The Supreme Kai",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["God Ki","Majin Buu Saga (Z)"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1907.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" },
+        { stat: "Base Blast Defense", max: 15, unit: "%" }
+      ] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Ki Recovery", max: 10, unit: "%" },
+        { 
+          stat: "Strike & Blast Defense", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Support Type", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Assailant Over the Waters",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Powerful Opponent"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1944.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" },
+        { 
+          stat: "Strike Attack", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Haven't you learned? Your puny blasts will do nothing!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1915.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 18, unit: "%" },
+        { 
+          stat: "Strike & Blast Defense", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Shadow Dragon", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Technique Too Fast for the Eye",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["GT"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1913.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" },
+        { 
+          stat: "Strike Attack", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan 4", 
+          }
+        }
+      ] }
+    ]
+ }, 
+{
+    name: "Watch this!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1555.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 25, unit: "%" },
+        { 
+          stat: "Strike & Blast Defense", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Defense Type", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "He had his chance...now try this!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1924.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Health", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" },
+        { stat: "Base Blast Attack", max: 15, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [
+        { 
+          stat: "Strike & Blast Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Turles Crusher Corps", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "Keep cool, I didn't come here to help you.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1921.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
     slots: [
       { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 18, unit: "%" }] },
-      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 18, unit: "%" }]},
-      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 20, unit: "%" }] }
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" },
+        { 
+          stat: "Strike & Blast Defense", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Regeneration", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "Fine, whatever. Though it would've looked really cool...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Hybrid Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1928.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" },
+        { stat: "Base Blast Attack", max: 12, unit: "%" }
+      ] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 10, unit: "%" },
+        { 
+          stat: "Strike & Blast Defense", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Kids", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "Don't you dare interfere!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Vegeta Clan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1931.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 10, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" },
+        { 
+          stat: "Strike & Blast Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Super Saiyan 2", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "A most brilliant display!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Future Trunks Saga (S)"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1939.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" },
+        { 
+          stat: "Blast Attack", 
+          max: 15, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Saiyan", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "Small, but can still fight!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["DAIMA","Goku"], 
+     match: "any" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1960.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" },
+         { 
+          stat: "Strike Attack", 
+          max: 15, 
+          unit: "%", 
+          condition: { 
+           type: "selfTag",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["Weapon Wielder", "Super Saiyan 2"],  // список тегов
+           match: "any",
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "Pan!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Sagas From the Movies"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1799.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Defense", max: 25, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 10, unit: "%" },
+        { 
+          stat: "Strike Attack", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Hybrid Saiyan", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "Ugh!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Hybrid Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1616.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" },
+        { 
+          stat: "Blast Attack", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Androids Saga (Z)", 
+          }
+        }
+      ] }
+    ]
+ }, 
+   {
+    name: "Replicating Goku Black",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Powerful Opponent"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1778.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Health Restoration", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Special Move Damage", max: 10, unit: "%" },
+        { stat: "Ultimate Damage", max: 10, unit: "%" }
+      ]},
+      { name: "Slot 3", stats: [{ stat: "Base Health", max: 12, unit: "%" },
+        { 
+          stat: "Strike Attack", 
+          max: 12, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Future Trunks Saga (S)", 
+          }
+        }
+      ] }
+    ]
+ }, 
+ {
+    name: "Standoff Against Cell",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Son Family"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1299.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" },
+        { 
+          stat: "Blast Attack", 
+          max: 15, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Cell Saga (Z)", 
+          }
+        }
+      ] }
+    ]
+ }, 
+ {
+    name: "You look surprised...",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Android"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1362.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 18, unit: "%" },
+        { 
+          stat: "Blast Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Cell Saga (Z)", 
+          }
+        }
+      ] }
+    ]
+ }, 
+ {
+    name: "Preemptive Opening Strike",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["DAIMA"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1959.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Ultimate Damage", max: 12, unit: "%" },
+        { 
+          stat: "Strike & Blast Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+           type: "selfTag",// 👈 новый тип "teamTags", "selfTag",
+           tags: ["GRN", "YEL"],  // список тегов
+           match: "any",
+          }
+        }
+      ] }
+    ]
+ }, 
+ {
+    name: "Hee-hee-hee-hee!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Son Family"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1959.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 12, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" },
+        { 
+          stat: "Strike Attack", 
+          max: 15, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "DAIMA", 
+          }
+        }
+      ] }
+    ]
+ }, 
+ {
+    name: "You dare get in my way?",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["DB"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1982.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Blast Attack", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 12, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Strike Attack", max: 15, unit: "%" },
+        { 
+          stat: "Strike & Blast Defense", 
+          max: 13, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Dragon Ball Saga", 
+          }
+        }
+      ] }
+    ]
+ },
+{
+    name: "Yes, that's a very good question.",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Support Type"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1691.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 20, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 10, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Base Blast Defense", max: 20, unit: "%" },
+        { 
+          stat: "Strike & Blast Defense", 
+          max: 15, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Event Exclusive", 
+          }
+        }
+      ] }
+    ]
+ },
+  {
+    name: "Let's amp this up!",
+    type: "Gold Equipment",
+    conditions: { 
+     tags: ["Saiyan"], 
+     match: "all" // варианты: "all" (и), "any" (или)
+     },
+    mainImage: "Image/Equip_img/Gold/EqIco_1646.webp",  // картинка экипировки
+    rarity: "Gold", // Gold, Unique, Silver, Bronze
+    slots: [
+      { name: "Slot 1", stats: [{ stat: "Special Move Damage", max: 15, unit: "%" }] },
+      { name: "Slot 2", stats: [{ stat: "Base Health", max: 15, unit: "%" }]},
+      { name: "Slot 3", stats: [{ stat: "Health Restoration", max: 15, unit: "%" },
+        { 
+          stat: "Strike & Blast Attack", 
+          max: 10, 
+          unit: "%", 
+          condition: { 
+            type: "selfTag",   // 👈 новый тип "teamTags", "selfTag",
+            tag: "Universe Rep", 
+          }
+        }
+      ] }
     ]
   },
   
