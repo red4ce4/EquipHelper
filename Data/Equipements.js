@@ -3200,7 +3200,7 @@ const equipment = [
      tags: ["GT"], 
      match: "all" // варианты: "all" (и), "any" (или)
     },
-    mainImage: "Image/Equip_img/Gold_up/EqIco_1518.webp",  // картинка экипировки
+    mainImage: "Image/Equip_img/Gold/EqIco_1518.webp",  // картинка экипировки
     rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
     slots: [
       { name: "Slot 1", stats: [{ stat: "Base Strike Attack", max: 18, unit: "%" }]},
@@ -3225,7 +3225,7 @@ const equipment = [
      tags: ["Future","Future Trunks Saga (S)"], 
      match: "all" // варианты: "all" (и), "any" (или)
     },
-    mainImage: "Image/Equip_img/Gold_up/EqIco_1491.webp",  // картинка экипировки
+    mainImage: "Image/Equip_img/Gold/EqIco_1491.webp",  // картинка экипировки
     rarity: "GoldUp", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
     slots: [
       { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 15, unit: "%" }]},
@@ -5379,7 +5379,7 @@ const equipment = [
      tags: ["Saiyan","YEL"], 
      match: "all" // варианты: "all" (и), "any" (или)
     },
-    mainImage: "ImageImage/Equip_img/Gold/EqIco_1153.webp",  // картинка экипировки
+    mainImage: "Image/Equip_img/Gold/EqIco_1153.webp",  // картинка экипировки
     rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
     slots: [
       { name: "Slot 1", stats: [{ stat: "Base Critical", max: 12.5, unit: "%" }]},
@@ -5655,31 +5655,6 @@ const equipment = [
     ]
  },
 {
-    name: "Saiyans don't do limits!",
-    type: "Gold Equipment",
-    conditions: { 
-     tags: ["Future"], 
-     match: "all" // варианты: "all" (и), "any" (или)
-     },
-    mainImage: "Image/Equip_img/Gold/EqIco_1541.webp",  // картинка экипировки
-    rarity: "Gold", // Gold, Unique, Silver, Bronze
-    slots: [
-      { name: "Slot 1",  stats: [{ stat: "Base Blast Defense", max: 12, unit: "%" }]},
-      { name: "Slot 2",  stats: [{ stat: "Base Critical", max: 10, unit: "%" },
-        { stat: "Base Strike Attack", max: 10, unit: "%" }
-      ]},
-      { name: "Slot 3", stats: [{
-          stat: "Blast Attack",
-          max: 5,
-          unit: "%",
-          condition: {
-          type: "perTagCount",
-          tag: "Future "
-          }
-        }]}
-    ]
- },
-{
     name: "I didn't know it was going to be that kind of fight",
     type: "Gold Equipment",
     conditions: { 
@@ -5867,21 +5842,6 @@ const equipment = [
           tag: "Rival Universe"
           }
         }]}
-    ]
-  },
-  {
-    name: "I'll just smash it to pieces!",
-    type: "Gold Equipment",
-    conditions: { 
-     tags: ["God Ki"], 
-     match: "all" // варианты: "all" (и), "any" (или)
-    },
-    mainImage: "Image/Equip_img/Gold/EqIco_1470.webp",  // картинка экипировки
-    rarity: "Gold", // Gold, Unique, Silver, Bronze, GoldUp, UniqueUp
-    slots: [
-      { name: "Slot 1", stats: [{ stat: "Base Strike Defense", max: 13, unit: "%" }]},
-      { name: "Slot 2", stats: [{ stat: "Base Blast Defense", max: 13, unit: "%" }]},
-      { name: "Slot 3", stats: [{ stat: "Base Blast Attack", max: 22, unit: "%" }]}
     ]
   },
   {
