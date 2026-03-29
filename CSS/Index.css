@@ -1,0 +1,545 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+/*----------Header*/
+header {
+  background-color: rgb(27, 27, 27);
+  color: rgb(97, 97, 97);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+Footer{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: rgb(37, 37, 37);
+  padding: 1rem;
+}
+footer div a{
+  color: white;
+  font-size: 12px;
+}
+
+.Banner{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.Zone{
+  position: relative;
+}
+
+.Socials{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.Socials img{
+  width: 30px;
+  height: 30px;
+}
+
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+h2,h1{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+/* ---------- Navigation ---------- */
+.main-nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.Socials .form-link {
+  display: inline-block;
+  padding: 6px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.Socials .form-link:hover {
+  background-color: #0056b3;
+}
+
+/* ---------- Footer (универсальный) ---------- */
+footer {
+  background-color: #111;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  margin: 0 0.6rem;
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-meta {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/*------------ Battle Member*/
+
+.team-section {
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.battle-members {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.member {
+  background-color:rgb(97, 97, 97);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1;
+}
+
+.character-select {
+  margin-bottom: 0.5rem;
+}
+
+.Container{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.main-character {
+  width: 205px;
+  height: 205px;
+  object-fit: contain;
+  /*border: 1px solid #ccc;*/
+}
+
+.rarity-icon {
+  height: 40px;
+  margin: 8px auto;
+  display: block;
+}
+
+.mini-rarity {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+/* Только для LL */
+.mini-rarity.ll {
+  width: 140px;
+  height: 40px;
+}
+
+.mini-rarity img.mini-rarity-ll {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 1;
+  left: 23px;
+}
+
+.mini-rarity img.mini-rarity-sparking {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51px;
+  height: 38px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.mini-rarity img.mini-rarity-icon {
+  width: 51px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
+
+.mini-type {
+  position: absolute;
+  left: 30px;
+}
+
+.mini-type img.mini-type-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Рамка Зенкай */
+.zenkai-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 205px; /* ширина персонажа */
+  height: 205px; /* высота персонажа */
+  z-index: 1;   /* под мини-иконками */
+}
+
+.zenkai-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Чтобы иконки оставались выше рамки */
+.mini-rarity,
+.mini-type {
+  z-index: 2;
+}
+
+
+
+/*.equipement-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.equipement {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.equipement img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.equip-info {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #333;
+}*/
+
+/*------------ SEARCH
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+  align-items: center;
+}*/
+
+/*.Container_StepsImage{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Tuto_Image{
+  width: 250px;
+  height: 250px;
+}
+
+.Donation_Image{
+  width: 250px;
+  height: 175px;
+}
+
+.search {
+  background-color: rgb(97, 97, 97);
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.Button{
+  display: inline-block;
+  background: linear-gradient(#8f1a1a, #db3a3a);
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  text-align: center;
+}*/
+
+/*------------ DESCRIPTION*/
+.description-section {
+  flex: 3;
+}
+
+.description-grid {
+  display: flex;
+  gap: 1rem;
+  /*background-color: rgb(97, 97, 97);*/
+  /*padding: 1rem;*/
+  border-radius: 12px;
+  /*box-shadow: 0 0 5px rgba(0,0,0,0.1);*/
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 2rem;
+  position: relative; /* для абсолютного позиционирования стрелок */
+  height: 258px;
+}
+
+/*.slot-number{
+  display: flex;
+  flex-direction: column;
+  background-color: #383838;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 40px;
+  justify-content: space-around;
+}
+.slot-number:first-child{
+  justify-content: none;
+}
+
+.slot-number h3{
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #444;
+}
+
+.slot-number div{
+  padding: 0.75rem;
+  text-align: center;
+  margin-top: 16px;
+}*/
+
+.equipment {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #363636;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /*gap: 10px;*/
+  background-color: #363636;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/*.slot h3 {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #363636;
+  margin: 0;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #000000;
+}*/
+
+.slot > div:first-child {
+  display: flex;
+  justify-content: center;
+  gap: none;
+}
+
+.slot img{
+  width: 30px;
+  height: 30px;
+}
+
+.slot-row {
+  padding: 0.75rem;
+  border-bottom: 1px solid #c5c5c5;
+  text-align: center;
+}
+
+.slot-row:last-child {
+  border-bottom: none;
+}
+.equip-container{
+   overflow-y: auto; /* вертикальный скролл при необходимости */
+}
+.character-select {
+  display: none;
+}
+
+.equip-nav-btn {
+  flex: 0 0 40px; /* фиксированная ширина кнопки */
+  height: 40px;
+  background-color: #646464;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  /* центрируем текст стрелки внутри кнопки */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* позиционируем по центру высоты сетки через margin */
+  margin-top: calc((279px - 40px) / 2); /* высота сетки минус высота кнопки делим на 2 */
+}
+
+.equip-nav-btn:hover {
+  background-color: #666;
+}
+
+.equip-nav-btn:disabled {
+  background-color: #222;
+  cursor: not-allowed;
+}
+
+
+/* ДЛЯ ОКНА ВЫБОРА ПЕРСОНАЖЕЙ */
+.char-modal[hidden] { display: none; }
+.char-modal {
+  position: fixed; inset: 0;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  z-index: 9999;
+}
+.char-modal__backdrop {
+  position: absolute; 
+  inset: 0; 
+  background: rgba(0,0,0,.6);
+}
+.char-modal__panel {
+  position: relative; 
+  background: #fff; 
+  border-radius: 12px;
+  width: min(900px, 92vw); 
+  max-height: 85vh; 
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+.char-modal__header {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 12px 16px; 
+  border-bottom: 1px solid #eee; 
+  font-weight: 600;
+}
+.char-modal__close { 
+  border: 0; 
+  background: 
+  transparent; 
+  font-size: 22px; 
+  cursor: pointer; 
+}
+.char-modal__grid {
+  padding: 14px;
+  overflow-y: auto; 
+  max-height: 70vh;
+}
+.char-card {
+  display: flex; 
+  /*flex-direction: column; gap: 6px*/; 
+  align-items: center;
+  width: 84px; 
+  border: 2px solid transparent; 
+  border-radius: 10px; 
+  padding: 6px;
+  cursor: pointer; 
+  transition: .15s;
+}
+.char-card:hover { 
+  border-color: #2196f3; 
+  transform: translateY(-2px); 
+}
+.char-card img {
+  width: 72px; 
+  height: 72px; 
+  object-fit: cover; 
+  border-radius: 8px;
+}
+.char-card span {
+  font-size: 11px; 
+  line-height: 1.1; 
+  text-align: center; 
+  color: #333;
+  width: 100%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+/* Блок одной редкости */
+.char-group {
+  margin-bottom: 20px;
+}
+.char-group h3 {
+  margin: 6px 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.char-group__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 84px);
+  gap: 10px;
+  justify-content: center;
+}
+
